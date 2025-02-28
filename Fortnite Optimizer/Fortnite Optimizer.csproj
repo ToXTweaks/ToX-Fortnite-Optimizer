@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75ECE631-5F7E-47D8-9BB8-0E67AD46D641}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fortnite_Optimizer</RootNamespace>
+    <AssemblyName>Fortnite Optimizer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_fn_tox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CuoreUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CuoreUI.Winforms.2025.2.3.2\lib\netstandard2.0\CuoreUI.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordRPC, Version=1.2.1.24, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.2.1.24\lib\net45\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FNOptimizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNOptimizer.Designer.cs">
+      <DependentUpon>FNOptimizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweaksTabs\Credits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweaksTabs\Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweaksTabs\Potato.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweaksTabs\Potato.Designer.cs">
+      <DependentUpon>Potato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweaksTabs\Extra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweaksTabs\Extra.Designer.cs">
+      <DependentUpon>Extra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweaksTabs\Tweaks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweaksTabs\Tweaks.Designer.cs">
+      <DependentUpon>Tweaks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweaksTabs\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweaksTabs\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Move.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\PopUp.cs" />
+    <EmbeddedResource Include="FNOptimizer.resx">
+      <DependentUpon>FNOptimizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TweaksTabs\Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TweaksTabs\Potato.resx">
+      <DependentUpon>Potato.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TweaksTabs\Extra.resx">
+      <DependentUpon>Extra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TweaksTabs\Tweaks.resx">
+      <DependentUpon>Tweaks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TweaksTabs\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crown_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fortnite_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_rounded_left_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potato_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tweaks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tweaks_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amd_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nvidia_geforce_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_mode_on_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\processor_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_card_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signal_24px-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_screen_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_shield_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fortnite_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run_command_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_controller_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monarch_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collage_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discord_new_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fold_arrows_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_priority_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_2_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast_download_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\performance_macbook_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unavailable_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-donate-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bitcoin-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-litecoin-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hi.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sound-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-no-audio-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_fn_tox.ico" />
+    <None Include="Resources\Apply.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
