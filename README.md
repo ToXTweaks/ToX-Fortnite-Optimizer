@@ -1,3 +1,4 @@
+![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg) ![License: Proprietary](https://img.shields.io/badge/license-Proprietary-red)
 # ToX-Fortnite-Optimizer
 An Optimization Tool Specifically Designed for Fortnite, Featuring Hundreds of Fortnite-Specific Tweaks!
 
