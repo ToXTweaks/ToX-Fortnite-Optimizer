@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfProfile>
+  <Profile>
+    <ProfileName>Fortnite</ProfileName>
+    <Executeables>
+      <string>fortnitelauncher.exe</string>
+      <string>fortniteclient-win64-shipping_be.exe</string>
+      <string>fortniteclient-win64-shipping_eac_eos.exe</string>
+      <string>fortniteclient.exe</string>
+      <string>fortniteclient-win64-shipping.exe</string>
+      <string>fortniteclient-win64-test.exe</string>
+      <string>fortniteclient-win64-shipping_eac.exe</string>
+    </Executeables>
+    <Settings>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - Negative LOD bias</SettingNameInfo>
+        <SettingID>1686376</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - Driver Controlled LOD Bias</SettingNameInfo>
+        <SettingID>6524559</SettingID>
+        <SettingValue>1</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - LOD Bias</SettingNameInfo>
+        <SettingID>7573135</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - Quality</SettingNameInfo>
+        <SettingID>13510289</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Antialiasing - Transparency Supersampling</SettingNameInfo>
+        <SettingID>282364549</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+      <ProfileSetting>
+        <SettingNameInfo>Texture filtering - LOD Bias (OGL)</SettingNameInfo>
+        <SettingID>541081465</SettingID>
+        <SettingValue>0</SettingValue>
+        <ValueType>Dword</ValueType>
+      </ProfileSetting>
+    </Settings>
+    <ExecutableFindFiles />
+  </Profile>
+</ArrayOfProfile>

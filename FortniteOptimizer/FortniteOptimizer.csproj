@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0CBFFFD-1C67-4E9B-9D0F-1FA9388F8D0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FortniteOptimizer</RootNamespace>
+    <AssemblyName>ToX Fortnite Optimizer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <WebView2NeverCopyLoaderDllToOutputDirectory>true</WebView2NeverCopyLoaderDllToOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowedReferenceRelatedFileExtensions>.config</AllowedReferenceRelatedFileExtensions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UI Reference\Microsoft.Web.WebView2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UI Reference\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vortex UI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UI Reference\Vortex UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmbeddedAssets.cs" />
+    <Compile Include="AppFonts.cs" />
+    <Compile Include="PotatoTextureMod.cs" />
+    <Compile Include="FortniteGamePath.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\creditsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\creditsPage.Designer.cs">
+      <DependentUpon>creditsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\homePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\homePage.Designer.cs">
+      <DependentUpon>homePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\potatoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\potatoPage.Designer.cs">
+      <DependentUpon>potatoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PotatoPreviewOverlay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\TweakProgressOverlay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProSettingsOverlay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\sweatsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\sweatsPage.Designer.cs">
+      <DependentUpon>sweatsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\tweakPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\tweakPage.Designer.cs">
+      <DependentUpon>tweakPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\creditsPage.resx">
+      <DependentUpon>creditsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\homePage.resx">
+      <DependentUpon>homePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\potatoPage.resx">
+      <DependentUpon>potatoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\sweatsPage.resx">
+      <DependentUpon>sweatsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\tweakPage.resx">
+      <DependentUpon>tweakPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToXTweaks-FortniteOptimizer.png" />
+    <None Include="Resources\ToXTweaks-PremiumUtility.png" />
+    <None Include="Resources\icons8-error-48.png" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Resources\Fonts\Bahnschrift.ttf">
+      <LogicalName>FortniteOptimizer.Resources.Fonts.Bahnschrift.ttf</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fonts\BowlbyOneSC-Regular.ttf">
+      <LogicalName>FortniteOptimizer.Resources.Fonts.BowlbyOneSC-Regular.ttf</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fonts\BurbankBigCondensedBlack.otf">
+      <LogicalName>FortniteOptimizer.Resources.Fonts.BurbankBigCondensedBlack.otf</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\app.ico">
+      <LogicalName>FortniteOptimizer.Resources.app.ico</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\fortnite_gameplay.jpg">
+      <LogicalName>FortniteOptimizer.Resources.fortnite_gameplay.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\nvidiaProfileInspector.exe">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.nvidiaProfileInspector.exe</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Fortnite_Low.nip">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Fortnite_Low.nip</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Fortnite_Medium (Recommended).nip">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Fortnite_Medium (Recommended).nip</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Fortnite_High.nip">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Fortnite_High.nip</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Fortnite_Default.nip">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Fortnite_Default.nip</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Before_Potato_Graphics.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Before_Potato_Graphics.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\After_Nvidia_Potato.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.After_Nvidia_Potato.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_Before_Creative.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_Before_Creative.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_Before_BR.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_Before_BR.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_Low_Creative.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_Low_Creative.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_Low_BR.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_Low_BR.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_Medium_Creative.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_Medium_Creative.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_Medium_BR.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_Medium_BR.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_High_Creative.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_High_Creative.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\Nvidia\Previews\Potato_High_BR.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.Nvidia.Previews.Potato_High_BR.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PowerPlan\ToX_Best_Power_Plan.pow">
+      <LogicalName>FortniteOptimizer.Resources.PowerPlan.ToX_Best_Power_Plan.pow</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\AmdIntel\Apply-PotatoTextures.ps1">
+      <LogicalName>FortniteOptimizer.Resources.Potato.AmdIntel.Apply-PotatoTextures.ps1</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\AmdIntel\Before_AMD_Potato.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.AmdIntel.Before_AMD_Potato.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Potato\AmdIntel\After_AMD_Potato.jpg">
+      <LogicalName>FortniteOptimizer.Resources.Potato.AmdIntel.After_AMD_Potato.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\packages\Microsoft.Web.WebView2.1.0.3240.44\runtimes\win-x86\native\WebView2Loader.dll">
+      <LogicalName>FortniteOptimizer.Native.win-x86.WebView2Loader.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\packages\Microsoft.Web.WebView2.1.0.3240.44\runtimes\win-x64\native\WebView2Loader.dll">
+      <LogicalName>FortniteOptimizer.Native.win-x64.WebView2Loader.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\packages\Microsoft.Web.WebView2.1.0.3240.44\runtimes\win-arm64\native\WebView2Loader.dll">
+      <LogicalName>FortniteOptimizer.Native.win-arm64.WebView2Loader.dll</LogicalName>
+    </EmbeddedResource>
+    <None Include="FodyWeavers.xml" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" />
+  <Import Project="..\packages\Fody.6.9.2\build\Fody.targets" Condition="Exists('..\packages\Fody.6.9.2\build\Fody.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="CleanDistributionOutput" AfterTargets="AfterBuild" Condition="'$(Configuration)' == 'Release'">
+    <ItemGroup>
+      <DistributionCleanup Include="$(OutputPath)*.xml;$(OutputPath)*.pdb;$(OutputPath)*.dll" />
+    </ItemGroup>
+    <Delete Files="@(DistributionCleanup)" ContinueOnError="true" />
+    <RemoveDir Directories="$(OutputPath)runtimes" ContinueOnError="true" />
+  </Target>
+  <Target Name="SignReleaseExecutable" AfterTargets="CleanDistributionOutput" Condition="'$(Configuration)' == 'Release' And Exists('d:\!Last-Install\ToX Best Power Plan\Tox free utility v3\Build\Signing\Sign-Release.ps1')">
+    <Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;d:\!Last-Install\ToX Best Power Plan\Tox free utility v3\Build\Signing\Sign-Release.ps1&quot; -TargetPath &quot;$(TargetPath)&quot;" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.9.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.9.2\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.6.0.0\build\Costura.Fody.props'))" />
+  </Target>
+</Project>

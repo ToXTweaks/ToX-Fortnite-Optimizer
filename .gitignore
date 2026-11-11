@@ -1,0 +1,9 @@
+.vs/
+Build/
+[Bb]in/
+[Oo]bj/
+packages/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
